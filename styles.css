@@ -1,0 +1,546 @@
+/*Not the cleanest, but hey, I didn't choose to be a janitor*/
+/*Fonts*/
+@font-face {
+    font-family: 'Open Sauce';
+    src: url('fonts/OpenSauceSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Migra';
+    src: url('fonts/Migra-Extralight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Size for pictures of me*/
+.me, .me2 {
+    width: auto; 
+    height: 35em; 
+}
+
+/*Make the second one stick to the right*/
+.me2 {
+    margin-right: 0;
+}
+
+/*Roleplay tags babyyyyy*/
+.rp-tags {
+    margin: 1rem 0 0 10%; 
+    white-space: nowrap;
+}
+
+/*Roleplay tag text sizes*/
+.rp-tags p{
+    font-size: 40px; 
+    margin: 10px 0px;
+}
+
+/*To contain something... I dunno*/
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Image containers for the education section*/
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+/*Skills container for the skills section*/
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+/*Edit only the header in the skills section*/
+.skills-text h2,
+.skills-image h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+/*Edit the text in the skills section*/
+.skills-text p,
+.skills-image p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+/*Edit the image in the skills section*/
+.skills-image img {
+    width: 40rem;
+    height: auto;
+    border: 2px solid #444;
+    margin: -8rem 0 1em 0;
+}
+
+/*Make the contact section look nice*/
+.contact {
+    display: flex;
+}
+
+/*LOL*/
+.lul {
+    font-size: 12px;
+}
+
+/*Umm yeah*/
+@media (max-width: 600px) {
+    #navbar {
+        width: 200px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+/* General Navbar Styling */
+#navbar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: -500px; /* Initial hidden state */
+    background-color: #222;
+    overflow-x: hidden;
+    transition: left 0.3s ease; /* Smooth toggle */
+    padding-top: 60px;
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+/* List styling */
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar ul li {
+    padding: 15px;
+}
+
+/* Link styling */
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    display: block;
+    transition: 0.3s;
+    font-family: Arial, sans-serif;
+}
+
+/* Hover effect on links */
+#navbar ul li a:hover {
+    background-color: #333;
+    color: #ddd;
+    padding-left: 20px;
+}
+
+/* Menu button */
+button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    z-index: 1001;
+    border-radius: 10px; /* Filet action babyyyyyyyyyyyyy*/
+}
+
+/* Menu button hover effect */
+button:hover {
+    background-color: #575757;
+}
+
+/*Dunno why there's 2 but I'm too deep into my code and I don't want to break anything*/
+button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+}
+
+/*Style images*/
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*Style the website*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0 10rem;
+    padding: 0;
+}
+
+/*Style the header*/
+header {
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Open Sauce', sans-serif;
+}
+
+/*Style the h1ers*/
+h1{
+    color: #f9f9f9;
+    font-family: 'Open Sauce', sans-serif;
+    font-size: calc(2vw + 5rem);
+    margin: 10px 0px 0px 0px;
+    white-space: nowrap;
+}
+
+/*h2 Styles*/
+h2 {
+    color: #f9f9f9;
+    font-family: 'Open Sauce', sans-serif;
+    font-size: 65px;
+}
+
+/*Style of each section*/
+section {
+    padding: 1rem 2rem;
+    margin: 0 0 20rem 0;
+    justify-content: center;
+}
+
+/*Unordered list styles*/
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*More*/
+ul li {
+    margin: 0.5rem 0;
+}
+
+/*Text styles*/
+p {
+    font-size: 25px;
+    font-family: 'Migra', sans-serif;
+}
+
+/*The rest are support for other devices with different size screens*/
+/*4K Ultra HD TV*/
+@media (min-width: 3840px) {    
+    #navbar {
+        width: 400px;
+        left: -450px;
+        padding-top: 120px;
+        border-radius: 8px;
+    }
+    #navbar ul li a {
+        font-size: 48px;
+    }
+    button {
+        font-size: 60px;
+    }
+    body {
+        margin: 0 15rem;
+    }
+
+    h1 {
+        font-size: calc(2vw + 12rem);
+    }
+
+    h2 {
+        font-size: 120px;
+    }
+
+    p {
+        font-size: 60px;
+    }
+
+    section {
+        margin-bottom: 40rem;
+    }
+
+    .me {
+        height: 100rem;
+    }
+    .rp-tags {
+        margin: 30rem 0 0 0;
+    }
+    .rp-tags p{
+        font-size: 120px;
+    }
+    .image-container {
+        width: 40%;
+        height: 40%;
+    }
+    .skills-text h2,
+    .skills-image h2 {
+        font-size: 5em;
+        margin-bottom: 0.5em;
+    }
+
+    .skills-text p,
+    .skills-image p {
+        font-size: 3em;
+        line-height: 1.5em;
+    }
+
+    .skills-image img {
+        width: 100rem;
+        margin: -8rem 0 1em 0;
+    }
+    .lul {
+        font-size: 30px;
+    }
+    .me2 {
+        height: 100rem;
+    }
+
+}
+
+/*HiDPI Laptop*/
+@media (max-width: 1440px) {
+    body {
+        margin: 0 8rem;
+    }
+    h1 {
+        font-size: calc(2vw + 4rem);
+    }
+}
+
+/*720p HD TV, MDPI Laptop, Touchscreen Laptop*/
+@media (max-width: 1280px) {
+    h1 {
+        font-size: calc(2vw + 3.5rem);
+    }
+    h2 {
+        font-size: 55px;
+    }
+    p {
+        font-size: 20px;
+    }
+    section {
+        margin: 0 0 20rem 0;
+    }
+    .me {
+        height: 30rem;
+    }
+    .rp-tags p{
+        font-size: 30px; 
+    }
+    .skills-image img {
+        width: 30rem;
+        margin: -8rem 0 1em 0;
+    }
+}
+
+/*iPad Pro*/
+@media (max-width: 1024px) {
+    body {
+        margin: 0;
+    }
+}
+
+/*iPad Air, iPad, Kindle Fire HDX Lnux, Nexus 10*/
+@media (max-width: 820px) {
+    h1 {
+        font-size: calc(2vw + 2.8rem);
+    }
+
+    .me {
+        height: 25rem;
+    }
+
+    .rp-tags {
+        margin: 5rem 0 0 5%;
+    }
+
+    .rp-tags p {
+        font-size: 30px;
+    }
+
+    .skills-image {
+        margin-left: 4rem;
+    }
+
+    .skills-image img {
+        width: calc(25rem - 2vw);
+        margin: -8rem 0 1em 0;
+    }
+
+    .lul {
+        font-size: 10px;
+        position: relative;
+        bottom: 2rem;
+        white-space: nowrap;
+    }
+
+}
+
+/*iPad Mini*/
+@media (max-width: 768px) {
+    section {
+        margin: 0 0 25rem 0;
+    }
+    h1 {
+        font-size: calc(2vw + 2.7rem);
+    }
+    .me {
+        height: 20rem;
+    }
+    .rp-tags{
+        margin: 3rem 0 0 0;
+    }
+    .rp-tags p {
+        font-size: 28px;
+    }
+}
+
+/*Nexus 7*/
+@media (max-width: 600px) {
+    section {
+        margin: 0 0 20rem 0;
+    }
+    h1 {
+        font-size: calc(2vw + 2rem);
+    }
+    .me {
+        height: 15rem;
+    }
+    .rp-tags {
+        margin: 2rem 0 0 0;
+    }
+    .rp-tags p {
+        font-size: 25px;
+    }
+    .skills-image {
+        margin-top: 10rem;
+        margin-left: 0;
+    }
+    .skills-image img {
+        width: 30rem;
+        margin: -8rem 0 1em 0;
+    }
+    .skills-container {
+        flex-direction: column;
+        align-items: normal;
+    }
+}
+
+/*Galaxy note 20, note 20 ultra, S20 ultra, Note 9, S20+, iPhone 11 pro max, iPhone 12/13 + pro, iPhone 12/13 pro max, iPhone 6/7/8 Plus, iPhone XR, iPhone XS Max, LG optimus L70, Nexus 5X, Nexus 6P, Pixel 2, Pixel 2 XL, Pixel 5*/
+@media (max-width: 430px) {
+    #navbar {
+        width: 100%; /* Full width on mobile */
+        left: -500px; /* Consistent hidden state for JS */
+        border-radius: 0px;
+    }
+
+    button {
+        top: 10px;
+        left: 10px;
+        font-size: 12px;
+    }
+    body {
+        margin: 0;
+    }
+    section {
+        margin: 0 0 5rem 0;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: calc(2vw + 1.2rem);
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .rp-tags p{
+        font-size: 25px;
+        text-align: center;
+    }
+    .me {
+        height: 15rem;
+        margin-right: auto;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .skills-text h2,
+    .skills-image h2 {
+    font-size: 22px;
+    }
+    .skills-image {
+        width: 20rem;
+        margin-top: 10rem;
+    }
+    .skills-image img {
+        width: calc(20rem - 2vw);
+        margin: -8rem 0 1em 0;
+    }
+    .skills-container {
+        flex-direction: column;
+        align-items: normal;
+    }    
+    .contact {
+        flex-direction: column;
+    }
+    .me2 {
+        margin: auto;
+    }
+    .lul {
+        font-size: 8px;
+        position: inherit;
+    }
+}
+
+/*Note 3 (kinda), S10/S10+, Galaxy S20, S5, S9/S9+, iPhone 11 pro, iPhone 12/13 mini, iPhone 6/7/8, iPhone SE 2nd Gen, iPhone X/XS, Microsoft Lumina 550, Microsoft Lumina 950*/
+@media (max-width: 376px) {
+    h1 {
+        font-size: calc(2vw + 1rem);
+    }
+    section {
+        margin: 0 0 5rem 0;
+    }
+    .me {
+        height: 14rem;
+        margin-left: auto;
+    }
+    .rp-tags {
+        margin: 1rem 0 0 0;
+    }
+    .rp-tags p{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+/*iPhone 5/SE*/
+@media (max-width: 320px) {
+    .me {
+        height: 13rem;
+    }
+    .skills-image {
+        width: 18rem;
+    }
+    .skills-image img {
+        width: calc(16rem - 2vw);
+    }
+    .me2 {
+        height: 29rem;
+    }
+}
+
+/*Nokia 8110 4G*/
+@media (max-width: 240px) {
+    /*no*/
+}

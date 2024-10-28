@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Moblie support-->
+    <title>Muhammad Asad Aziz Portfolio</title> <!--Title-->
+    <link rel="stylesheet" href="styles.css"> <!--CSS file-->
+    <script src="script.js"></script> <!--JS file-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--Font awesome-->
+</head>
+<body>
+    <!--Navigation bar-->
+    <div id="navbar"> 
+        <ul>
+            <li><a onclick="scrollToSection('about')">About Me</a></li>
+            <li><a onclick="scrollToSection('education')">Education</a></li>
+            <li><a onclick="scrollToSection('skills')">Skills</a></li>
+            <li><a onclick="scrollToSection('contact')">Contact</a></li>
+        </ul>
+    </div>
+    <button id="menuButton"><i class="fa fa-bars"></i> Menu</button>
+        
+    <!--Title-->
+    <header>
+        <div style="text-align: left;">
+            <h1>MUHAMMAD ASAD AZIZ</h1>
+            <p style="font-family: 'Open Sauce', sans-serif; margin: 10px 0 0 5px;">Computer Engineer</p>
+        </div>
+    </header>
+
+    <!--Landing page-->
+    <section style="display: flex;"> 
+        <img src="images/Me1.jpg" class="me" style="margin-left: 0;">
+        <!--What all the girls call me-->
+        <div class="rp-tags">
+            <p style="margin: 0;">Handsome/Gamer</p>
+            <p>Funny/Handsome</p>
+            <p>Handsome/Cool</p>
+            <p>Smart/Handsome</p>
+        </div>
+    </section>
+
+    <!--About me-->
+    <section id="about">
+        <h2>About Me</h2>
+        <!--Shakesbeer-->
+        <p>
+            What’s up all, I’m Muhammad Asad Aziz, you can call me Jacket, I am a 17-year-old chad trying to became a Computer Engineer. Not really good at anything, but hey, who needs to be? All I like to do is play videogames and watch other people play videogames that I can’t play.
+            <br><br>
+            KMUTT isn't so bad, just remove the maths and that place is fun as hell. Ok so, I guess I can say that I’m from Bangkok, Thailand. I only know 1 language and that is English, Thai is way way way too hard.
+            <br><br>
+            Ok, I think that’s about it, hire me bro.
+        </p>
+    </section>
+
+    <!--Education-->
+    <section id="education">
+        <h2>Education</h2>
+        <!--Man's too smart-->
+        <div class="container">
+            <div class="image-container">
+                <a href="https://www.pais.ac.th/about/">
+                    <img src="images/PAIS.jpg" alt="Pan-Asia International School Logo" style="width: 95%; height: 95%;">
+                    <p><a title="" href="https://www.pais.ac.th/about/" target="_blank">Primary School</a></p>
+                </a>
+            </div>
+        
+            <div class="image-container">
+                <a href="https://cis.ac.th/school-info/our-values/">
+                    <img src="images/CIS.jpg" alt="Crescent International School front gate" style="width: 95%; height: 95%;"">
+                    <p><a title="" href="https://cis.ac.th/school-info/our-values/" target="_blank">Middle School</a></p>
+                </a>
+            </div>
+        
+            <div class="image-container">
+                <a href="https://wolseyhalloxford.org.uk/about-us/">
+                    <img src="images/WHO.jpg" alt="Wolsey Hall Oxford Logo" style="width: 95%; height: 95%;">
+                    <p><a title="" href="https://wolseyhalloxford.org.uk/about-us/" target="_blank">Primary School</a></p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--Madd skills bro-->
+    <section id="skills">
+        <h2>Skillz</h2>
+        <!--Chatgp... Nah, purely me bro-->
+        <div class="skills-container">
+            <!-- Coding Skills Section -->
+            <div class="skills-text">
+                <h2>I guess coding?</h2>
+                <p>I'm not THAT good, I just know a little bit of C, Python, HTML, CSS, JavaScript, SQL, Lua, and yeah...</p>
+            </div>
+        
+            <!-- Game Development Section -->
+            <div class="skills-image">
+                <img src="cringe/Videogam.gif" alt="GIF of a Video Game">
+                <h2>Video... game... development...</h2>
+                <p>I made a video game... it's cringe though...</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Call me-->
+    <section id="contact" class="contact">
+        <div>
+            <h2>Get in Touch <span class="lul">(Don't touch me bro. I'm a minor)</span></h2>
+            <p>Email: mh.asadaziz@gmail.com</p>
+            <p>Phone: +66-0958249368</p>
+            <a href="https://www.instagram.com/m.asadaziz/">
+                <p>Instagram: @m.asadaziz</p>
+            </a>
+            <p>Discord: jacketjimmy</p>
+        </div>
+        <img src="images/Me2.jpg" alt="Contact Image" class="me2"> 
+    </section>
+</body>
+</html>
