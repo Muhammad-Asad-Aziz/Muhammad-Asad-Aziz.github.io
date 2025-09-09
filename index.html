@@ -1,118 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="auto">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Moblie support-->
-    <title>Muhammad Asad Aziz Portfolio</title> <!--Title-->
-    <link rel="stylesheet" href="styles.css"> <!--CSS file-->
-    <script src="script.js"></script> <!--JS file-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--Font awesome-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asad — Engineer, Optimizer, Builder</title>
+  <meta name="description" content="Asad builds robust, reproducible workflows, tools, and optimizations across Windows, Android, and game engines." />
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="images/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="fonts.css" />
+  <link rel="stylesheet" href="fonts.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="script.js" defer></script>
 </head>
 <body>
-    <!--Navigation bar-->
-    <div id="navbar"> 
-        <ul>
-            <li><a onclick="scrollToSection('about')">About Me</a></li>
-            <li><a onclick="scrollToSection('education')">Education</a></li>
-            <li><a onclick="scrollToSection('skills')">Skills</a></li>
-            <li><a onclick="scrollToSection('contact')">Contact</a></li>
-        </ul>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#hero" aria-label="Home">Asad</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <ul id="nav-list" class="nav__list">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#tooling">Tooling</a></li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="theme">
+          <button id="theme-toggle" class="theme__btn" aria-label="Toggle theme" title="Toggle theme"></button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="hero" class="section hero" data-section>
+      <div class="container">
+        <div class="hero__media">
+          <img src="images/profile.jpg" alt="Asad" width="480" height="480" loading="lazy" decoding="async">
+        </div>
+        <div class="hero__copy">
+          <h1>Engineer who refuses fragile workflows</h1>
+          <p>I build tools and reproducible systems that hold up under pressure. If it breaks once, it won’t twice.</p>
+          <div class="hero__cta">
+            <a class="btn" href="#work">See work</a>
+            <a class="btn btn--ghost" href="#contact">Work together</a>
+          </div>
+          <ul class="badges">
+            <li><span class="badge">Schedule makers</span></li>
+            <li><span class="badge">Game optimization</span></li>
+            <li><span class="badge">Digital logic</span></li>
+            <li><span class="badge">Android workflows</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section section--alt" data-section>
+      <div class="container">
+        <h2>Selected work</h2>
+        <div class="grid cards">
+          <article class="card" tabindex="0">
+            <h3>OneNote export workflow</h3>
+            <p>Reproducible exports with crisp annotations and consistent layout across devices.</p>
+            <ul class="meta">
+              <li>CSS/JS automation</li>
+              <li>PDF clarity</li>
+              <li>Cross-device parity</li>
+            </ul>
+          </article>
+          <article class="card" tabindex="0">
+            <h3>Unity/UE game tuning</h3>
+            <p>Practical launch flags, mod loaders, and asset-level tweaks for mid-tier GPUs.</p>
+            <ul class="meta">
+              <li>HD 4600 focus</li>
+              <li>Runtime plugins</li>
+              <li>Measured gains</li>
+            </ul>
+          </article>
+          <article class="card" tabindex="0">
+            <h3>NAND-only logic toolkit</h3>
+            <p>Reusable conversion recipes with visual sanity checks and minimal gates.</p>
+            <ul class="meta">
+              <li>SOP to NAND–NAND</li>
+              <li>Self-NAND rules</li>
+              <li>Wire patterns</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tooling" class="section" data-section>
+      <div class="container">
+        <h2>Tools and stack</h2>
+        <div class="stack">
+          <div class="stack__group">
+            <h3>Core</h3>
+            <ul>
+              <li>Vanilla CSS Grid/Flex with container queries</li>
+              <li>Progressive enhancement (no JS → still great)</li>
+              <li>Accessible landmarks and focus flow</li>
+            </ul>
+          </div>
+          <div class="stack__group">
+            <h3>Performance</h3>
+            <ul>
+              <li>Lazy images + responsive sizes</li>
+              <li>Font loading with fallbacks</li>
+              <li>Service worker caching</li>
+            </ul>
+          </div>
+          <div class="stack__group">
+            <h3>Polish</h3>
+            <ul>
+              <li>Motion reduced if you prefer</li>
+              <li>Accent color + dark mode</li>
+              <li>Scroll spy + subtle reveals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="notes" class="section section--alt" data-section>
+      <div class="container">
+        <h2>Notes and write-ups</h2>
+        <div class="notes">
+          <article class="note">
+            <h3>Path-length crash in UE projects</h3>
+            <p>Why a few characters in a folder name can nuke your launch—and how to never see it again.</p>
+            <a class="link" href="#" aria-disabled="true">Write-up coming</a>
+          </article>
+          <article class="note">
+            <h3>Split APK sanity checklist</h3>
+            <p>ABI, splits, signatures, and the one flag you always forget while patching.</p>
+            <a class="link" href="#" aria-disabled="true">Write-up coming</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" data-section>
+      <div class="container">
+        <h2>Contact</h2>
+        <form class="form" netlify data-validate="true" novalidate>
+          <div class="form__row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="form__row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form__row">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" rows="5" required></textarea>
+          </div>
+          <div class="form__actions">
+            <button class="btn" type="submit">Send</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Asad. Built with care, not frameworks.</p>
+      <ul class="social">
+        <li><a href="https://github.com/Muhammad-Asad-Aziz" target="_blank" rel="me noopener">GitHub</a></li>
+        <li><a href="mailto:hello@example.com">Email</a></li>
+      </ul>
     </div>
-    <button id="menuButton"><i class="fa fa-bars"></i> Menu</button>
-        
-    <!--Title-->
-    <header>
-        <div style="text-align: left;">
-            <h1>MUHAMMAD ASAD AZIZ</h1>
-            <p style="font-family: 'Open Sauce', sans-serif; margin: 10px 0 0 5px;">Computer Engineer</p>
-        </div>
-    </header>
-
-    <!--Landing page-->
-    <section style="display: flex;"> 
-        <img src="images/Me1.jpg" class="me" style="margin-left: 0;">
-        <!--What all the girls call me-->
-        <div class="rp-tags">
-            <p style="margin: 0;">Handsome/Gamer</p>
-            <p>Funny/Handsome</p>
-            <p>Handsome/Cool</p>
-            <p>Smart/Handsome</p>
-        </div>
-    </section>
-
-    <!--About me-->
-    <section id="about">
-        <h2>About Me</h2>
-        <!--Shakesbeer-->
-        <p>
-            What’s up all, I’m Muhammad Asad Aziz, you can call me Jacket, I am a 17-year-old chad trying to became a Computer Engineer. Not really good at anything, but hey, who needs to be? All I like to do is play videogames and watch other people play videogames that I can’t play.
-            <br><br>
-            KMUTT isn't so bad, just remove the maths and that place is fun as hell. Ok so, I guess I can say that I’m from Bangkok, Thailand. I only know 1 language and that is English, Thai is way way way too hard.
-            <br><br>
-            Ok, I think that’s about it, hire me bro.
-        </p>
-    </section>
-
-    <!--Education-->
-    <section id="education">
-        <h2>Education</h2>
-        <!--Man's too smart-->
-        <div class="container">
-            <div class="image-container">
-                <a href="https://www.pais.ac.th/about/">
-                    <img src="images/PAIS.jpg" alt="Pan-Asia International School Logo" style="width: 95%; height: 95%;">
-                    <p><a title="" href="https://www.pais.ac.th/about/" target="_blank">Primary School</a></p>
-                </a>
-            </div>
-        
-            <div class="image-container">
-                <a href="https://cis.ac.th/school-info/our-values/">
-                    <img src="images/CIS.jpg" alt="Crescent International School front gate" style="width: 95%; height: 95%;"">
-                    <p><a title="" href="https://cis.ac.th/school-info/our-values/" target="_blank">Middle School</a></p>
-                </a>
-            </div>
-        
-            <div class="image-container">
-                <a href="https://wolseyhalloxford.org.uk/about-us/">
-                    <img src="images/WHO.jpg" alt="Wolsey Hall Oxford Logo" style="width: 95%; height: 95%;">
-                    <p><a title="" href="https://wolseyhalloxford.org.uk/about-us/" target="_blank">Primary School</a></p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!--Madd skills bro-->
-    <section id="skills">
-        <h2>Skillz</h2>
-        <!--Chatgp... Nah, purely me bro-->
-        <div class="skills-container">
-            <!-- Coding Skills Section -->
-            <div class="skills-text">
-                <h2>I guess coding?</h2>
-                <p>I'm not THAT good, I just know a little bit of C, Python, HTML, CSS, JavaScript, SQL, Lua, and yeah...</p>
-            </div>
-        
-            <!-- Game Development Section -->
-            <div class="skills-image">
-                <img src="cringe/Videogam.gif" alt="GIF of a Video Game">
-                <h2>Video... game... development...</h2>
-                <p>I made a video game... it's cringe though...</p>
-            </div>
-        </div>
-    </section>
-
-    <!--Call me-->
-    <section id="contact" class="contact">
-        <div>
-            <h2>Get in Touch <span class="lul">(Don't touch me bro. I'm a minor)</span></h2>
-            <p>Email: mh.asadaziz@gmail.com</p>
-            <p>Phone: +66-0958249368</p>
-            <a href="https://www.instagram.com/m.asadaziz/">
-                <p>Instagram: @m.asadaziz</p>
-            </a>
-            <p>Discord: jacketjimmy</p>
-        </div>
-        <img src="images/Me2.jpg" alt="Contact Image" class="me2"> 
-    </section>
+  </footer>
 </body>
 </html>
