@@ -71,9 +71,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   background: color-mix(in oklab, var(--bg), transparent 30%); box-shadow: var(--shadow);
 }
 .nav { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--s0); padding: var(--s-2) 0; }
-.brand { font-weight: 700; font-size: 1.1rem; }
+.brand { font-weight: 700; font-size: 1.1rem; margin-left: 20px; }
 .nav__toggle { display: none; background: none; border: 0; color: inherit; }
-.nav__list { display: flex; gap: var(--s0); align-items: center; list-style: none; margin: 0; padding: 0; }
+.nav__list { display: flex; gap: var(--s0); align-items: center; list-style: none; margin: 0 10px 0 0; padding: 0; }
 .nav__list a { padding: .45rem .7rem; border-radius: 8px; }
 .nav__list a.is-active { background: color-mix(in oklab, var(--accent), transparent 75%); }
 
